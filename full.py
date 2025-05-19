@@ -7,10 +7,10 @@
 # Região e sub-região ok
 # Populaão ok
 # Área total (em km2) ok
-# Moeda principal (nome e símblo)
-# Idioma principal
-# Fuso horário
-# URL da bandeira
+# Moeda principal (nome e símblo) ok
+# Idioma principal ok
+# Fuso horário 
+# URL da bandeira 
 
 #Imprtando bibliotecas:
 import requests
@@ -60,10 +60,28 @@ dados = resposta.json()
 
 #Aqui temos o nome e símbolo da moeda:
 
-for name in dados:
-    dict_moeda = name.get('currencies',{})
+# for name in dados:
+#     dict_moeda = name.get('currencies',{})
 
-    for moeda_info in dict_moeda.values():
-        simb = moeda_info.get('symbol','sem símbolo')
-        moeda = moeda_info.get('name','Sem moeda')
-        print(f"Moeda: {moeda} \nSímbolo: {simb}")
+#     for moeda_info in dict_moeda.values():
+#         simb = moeda_info.get('symbol','sem símbolo')
+#         moeda = moeda_info.get('name','Sem moeda')
+#         print(f"Moeda: {moeda} \nSímbolo: {simb}")
+
+# Aqui está para Idioma Principal:
+
+# for country in dados:
+#     languages = country.get("languages", {})
+#     if languages:
+#         first_lang_code = next(iter(languages))
+#         main_language = languages[first_lang_code]
+#         print(main_language)
+#     else:
+#         print("Sem Idioma")
+
+
+# Aqui está o fuso horário
+
+for fuso in dados:
+    fuso = fuso['timezones'][0]
+    print(fuso)
