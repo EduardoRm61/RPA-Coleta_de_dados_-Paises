@@ -9,7 +9,7 @@
 # Área total (em km2) ok
 # Moeda principal (nome e símblo) ok
 # Idioma principal ok
-# Fuso horário 
+# Fuso horário ok
 # URL da bandeira 
 
 #Imprtando bibliotecas:
@@ -82,6 +82,11 @@ dados = resposta.json()
 
 # Aqui está o fuso horário
 
-for fuso in dados:
-    fuso = fuso['timezones'][0]
-    print(fuso)
+# for fuso in dados:
+#     fuso = fuso['timezones'][0]
+#     print(fuso)
+
+# Aqui está para bandeira:
+for bandeiras in dados:
+    bandeira = bandeiras['flags']['png']
+    print(bandeira)
