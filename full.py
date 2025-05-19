@@ -6,7 +6,7 @@
 # Continente ok
 # Região e sub-região ok
 # Populaão ok
-# Área total (em km2)
+# Área total (em km2) ok
 # Moeda principal (nome e símblo)
 # Idioma principal
 # Fuso horário
@@ -37,7 +37,7 @@ dados = resposta.json()
 
 # Aqui temos o continente
 # for continente in dados:
-#     continente = continente.get('region','Outro Planete rs')
+#     continente = continente.get('continents','Outro Planete rs')
 #     print(continente)
 
 # Aqui temos sub-região:
@@ -57,3 +57,13 @@ dados = resposta.json()
 # for area in dados:
 #     area = area.get('area')
 #     print(area) # Editar print para contemplar km^2
+
+#Aqui temos o nome e símbolo da moeda:
+
+for name in dados:
+    dict_moeda = name.get('currencies',{})
+
+    for moeda_info in dict_moeda.values():
+        simb = moeda_info.get('symbol','sem símbolo')
+        moeda = moeda_info.get('name','Sem moeda')
+        print(f"Moeda: {moeda} \nSímbolo: {simb}")
