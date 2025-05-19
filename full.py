@@ -4,7 +4,7 @@
 # Nome commum e nome oficial ok
 # Capital ok
 # Continente ok
-# Região e sub-região 
+# Região e sub-região ok
 # Populaão
 # Área total (em km2)
 # Moeda principal (nome e símblo)
@@ -41,6 +41,14 @@ dados = resposta.json()
 #     print(continente)
 
 # Aqui temos sub-região:
-for sub_reg in dados:
-    sub = sub_reg.get('subregion')
-    print(sub)
+# for sub_reg in dados:
+#     sub = sub_reg.get('subregion')
+#     print(sub)
+
+# Aqui temos a população:
+for populacao in dados:
+    populacao = populacao.get('population')
+    if populacao == 0 or populacao == None:
+        print("Sem população")
+    else:
+        print(populacao)
