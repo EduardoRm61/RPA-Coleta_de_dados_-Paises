@@ -5,7 +5,7 @@
 # Capital ok
 # Continente ok
 # Região e sub-região ok
-# Populaão
+# Populaão ok
 # Área total (em km2)
 # Moeda principal (nome e símblo)
 # Idioma principal
@@ -46,9 +46,14 @@ dados = resposta.json()
 #     print(sub)
 
 # Aqui temos a população:
-for populacao in dados:
-    populacao = populacao.get('population')
-    if populacao == 0 or populacao == None:
-        print("Sem população")
-    else:
-        print(populacao)
+# for populacao in dados:
+#     populacao = populacao.get('population')
+#     if populacao == 0 or populacao == None:
+#         print("Sem população")
+#     else:
+#         print(populacao)
+
+# Aqui temos área total:
+# for area in dados:
+#     area = area.get('area')
+#     print(area) # Editar print para contemplar km^2
