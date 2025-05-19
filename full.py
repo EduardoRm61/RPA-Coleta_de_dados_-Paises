@@ -35,3 +35,8 @@ dados = resposta.json()
 #     capital = capital.get('capital',['Sem capital'])[0]
 #     print(capital)
 
+# Aqui temos o continente
+for continente in dados:
+    continente = continente.get('region','Outro Planete rs')
+    print(continente)
+
