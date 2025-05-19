@@ -3,8 +3,8 @@
 # para coletar as seguintes infomações:
 # Nome commum e nome oficial ok
 # Capital ok
-# Continente 
-# Região e sub-região
+# Continente ok
+# Região e sub-região 
 # Populaão
 # Área total (em km2)
 # Moeda principal (nome e símblo)
@@ -36,7 +36,11 @@ dados = resposta.json()
 #     print(capital)
 
 # Aqui temos o continente
-for continente in dados:
-    continente = continente.get('region','Outro Planete rs')
-    print(continente)
+# for continente in dados:
+#     continente = continente.get('region','Outro Planete rs')
+#     print(continente)
 
+# Aqui temos sub-região:
+for sub_reg in dados:
+    sub = sub_reg.get('subregion')
+    print(sub)
