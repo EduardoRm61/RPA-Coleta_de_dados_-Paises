@@ -40,6 +40,11 @@ dados = resposta.json()
 #     continente = continente.get('continents','Outro Planete rs')
 #     print(continente)
 
+# Aqui é região:
+for regiao in dados:
+    regiao = regiao.get('region')
+    print(regiao)
+
 # Aqui temos sub-região:
 # for sub_reg in dados:
 #     sub = sub_reg.get('subregion')
@@ -87,6 +92,6 @@ dados = resposta.json()
 #     print(fuso)
 
 # Aqui está para bandeira:
-for bandeiras in dados:
-    bandeira = bandeiras['flags']['png']
-    print(bandeira)
+# for bandeiras in dados:
+#     bandeira = bandeiras['flags']['png']
+#     print(bandeira)
